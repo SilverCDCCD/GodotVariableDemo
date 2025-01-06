@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://juvaya7dllds"]
+
+[ext_resource type="Script" path="res://Scripts/string_demo.gd" id="1_y7c1t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wb8k8"]
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_fc3c0"]
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_22v2l"]
+font_size = 48
+
+[node name="StringDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y7c1t")
+
+[node name="HeaderLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 23.0
+offset_right = 428.0
+offset_bottom = 90.0
+text = "Enter your name:    "
+label_settings = SubResource("LabelSettings_wb8k8")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 23.0
+offset_right = 630.0
+offset_bottom = 90.0
+label_settings = SubResource("LabelSettings_fc3c0")
+
+[node name="GreetingLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 204.0
+offset_right = 160.0
+offset_bottom = 271.0
+label_settings = SubResource("LabelSettings_22v2l")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

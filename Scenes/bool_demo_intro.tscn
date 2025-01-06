@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7tan3mrsw5uv"]
+
+[ext_resource type="Script" path="res://Scripts/bool_demo_intro.gd" id="1_lwblp"]
+[ext_resource type="PackedScene" uid="uid://386fyiuj83rv" path="res://Scenes/skip_bar.tscn" id="2_mltiy"]
+[ext_resource type="PackedScene" uid="uid://gn6uxdiiy6yr" path="res://Scenes/quitter.tscn" id="3_dcjp7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rh8k3"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_0s35v"]
+font_size = 20
+
+[node name="Bool Demo Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lwblp")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "This project was made to demonstrate what variables are and how they are used in a game design context."
+label_settings = SubResource("LabelSettings_rh8k3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SkipLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 550.0
+offset_right = 991.0
+offset_bottom = 578.0
+text = "Hold SPACE to skip"
+label_settings = SubResource("LabelSettings_0s35v")
+
+[node name="SkipBar" parent="." instance=ExtResource("2_mltiy")]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 590.0
+offset_right = 1135.0
+offset_bottom = 617.0
+
+[node name="AdvanceTimer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
+
+[node name="SkipTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Quitter" parent="." instance=ExtResource("3_dcjp7")]
+layout_mode = 1

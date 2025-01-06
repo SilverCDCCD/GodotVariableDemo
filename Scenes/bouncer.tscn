@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://qdddsko8jh3i"]
+
+[ext_resource type="Texture2D" uid="uid://raohvnmao1gs" path="res://icon.svg" id="1_ga2qv"]
+[ext_resource type="Script" path="res://Scripts/bouncer.gd" id="2_47d56"]
+
+[node name="Bouncer" type="TextureRect"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 133.0
+offset_bottom = 133.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_ga2qv")
+script = ExtResource("2_47d56")

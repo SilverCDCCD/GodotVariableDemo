@@ -1,0 +1,130 @@
+[gd_scene load_steps=13 format=3 uid="uid://dnmggvvw66ntk"]
+
+[ext_resource type="PackedScene" uid="uid://gn6uxdiiy6yr" path="res://Scenes/quitter.tscn" id="1_5xryn"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_066lh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_en1mf"]
+font_size = 64
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(5, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr5su"]
+bg_color = Color(0, 0.843137, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4x4lc"]
+bg_color = Color(0, 0.588235, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1r4g"]
+bg_color = Color(0, 0.843137, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqyjj"]
+bg_color = Color(1, 0.392157, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5nfv"]
+bg_color = Color(0.705882, 0.196078, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78tle"]
+bg_color = Color(0.588235, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtgaj"]
+bg_color = Color(0.27451, 0, 0.588235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72btg"]
+bg_color = Color(0, 0.627451, 0.784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tiqg"]
+bg_color = Color(0, 0.313726, 0.666667, 1)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_066lh")
+
+[node name="HeaderLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "MAIN MENU"
+label_settings = SubResource("LabelSettings_en1mf")
+horizontal_alignment = 1
+
+[node name="Quitter" parent="." instance=ExtResource("1_5xryn")]
+layout_mode = 1
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 160.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="StringDemoButton" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389
+anchor_right = 0.611
+anchor_bottom = 0.143
+offset_left = -0.128021
+offset_right = 0.127991
+offset_bottom = -0.064003
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_xr5su")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4x4lc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1r4g")
+text = "String Demo"
+
+[node name="IntDemoButton" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389
+anchor_top = 0.223
+anchor_right = 0.611
+anchor_bottom = 0.366
+offset_left = -0.128021
+offset_top = 0.0960007
+offset_right = 0.127991
+offset_bottom = 0.0319824
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_yqyjj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a5nfv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqyjj")
+text = "Int Demo"
+
+[node name="FloatDemoButton" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389
+anchor_top = 0.446
+anchor_right = 0.611
+anchor_bottom = 0.589
+offset_left = -0.128021
+offset_top = 0.192001
+offset_right = 0.127991
+offset_bottom = 0.127991
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_78tle")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rtgaj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_78tle")
+text = "Float Demo"
+
+[node name="BoolDemoButton" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389
+anchor_top = 0.67
+anchor_right = 0.611
+anchor_bottom = 0.812
+offset_left = -0.128021
+offset_top = -0.160004
+offset_right = 0.127991
+offset_bottom = 0.223999
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_72btg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7tiqg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_72btg")
+text = "Bool Demo"

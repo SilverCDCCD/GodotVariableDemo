@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=3 uid="uid://c38ptp63qnla7"]
+
+[ext_resource type="Script" path="res://Scripts/float_demo.gd" id="1_l3f5t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vxx4e"]
+font_size = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8v3j"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hgc0"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nb8g5"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13a1o"]
+bg_color = Color(0, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rc4p"]
+bg_color = Color(0, 0, 1, 1)
+
+[node name="FloatDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l3f5t")
+
+[node name="FillLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 25.0
+offset_right = 722.0
+offset_bottom = 92.0
+text = "Bars Filled: 0.0"
+label_settings = SubResource("LabelSettings_vxx4e")
+
+[node name="Bars" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 160.0
+offset_right = 1152.0
+offset_bottom = 448.0
+
+[node name="Bar1" type="ProgressBar" parent="Bars"]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 1088.0
+offset_bottom = 32.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_l8v3j")
+step = 1.0
+show_percentage = false
+
+[node name="Bar2" type="ProgressBar" parent="Bars"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 96.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_8hgc0")
+step = 1.0
+show_percentage = false
+
+[node name="Bar3" type="ProgressBar" parent="Bars"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 1088.0
+offset_bottom = 160.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_nb8g5")
+step = 1.0
+show_percentage = false
+
+[node name="Bar4" type="ProgressBar" parent="Bars"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 1088.0
+offset_bottom = 224.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_13a1o")
+step = 1.0
+show_percentage = false
+
+[node name="Bar5" type="ProgressBar" parent="Bars"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 1088.0
+offset_bottom = 288.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_3rc4p")
+step = 1.0
+show_percentage = false
