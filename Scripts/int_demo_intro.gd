@@ -107,4 +107,4 @@ func hide_skip() -> void:
 
 
 func move_to_demo() -> void:
-	get_tree().change_scene_to_file("res://Scenes/string_demo.tscn")
+	get_tree().change_scene_to_file("res://Scenes/int_demo.tscn")
