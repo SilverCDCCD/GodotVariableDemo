@@ -30,6 +30,10 @@ var floaters: int = 1
 @onready var pf_floater = preload("res://Scenes/bouncer.tscn")
 
 
+func _ready() -> void:
+	$Label.z_index = -1
+
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed() and not event.is_echo():
 		match event.physical_keycode:
